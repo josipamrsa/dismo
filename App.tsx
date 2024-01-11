@@ -1,20 +1,34 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { useState } from 'react';
+import Main from './app/Main';
+import * as Font from 'expo-font'
+import AppLoading from 'expo-app-loading';
+
+const fetchFont = () => {
+  return Font.loadAsync({
+    'raleway': require('./assets/fonts/Raleway-Regular.ttf'),
+    'roboto-condensed': require('./assets/fonts/RobotoCondensed-Regular.ttf'),
+    'roboto-condensed-light': require('./assets/fonts/RobotoCondensed-Light.ttf')
+  })
+} 
+
 
 export default function App() {
+  const [fontsLoaded, setFontsLoaded] = useState(false)
+
+  if (!fontsLoaded) {
+    return <AppLoading
+      startAsync={fetchFont}
+      onFinish={() => setFontsLoaded(true)}
+      onError={(err) => console.log(err)} />
+  } 
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Main />
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
+
+
+
+//<Main />
