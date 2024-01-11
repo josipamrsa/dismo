@@ -20,7 +20,19 @@ let styles = React.StyleSheet.create({
         content: {
             marginTop: "30%",
             paddingEnd: "8%",
-            paddingStart: "8%"
+            paddingStart: "8%",
+            width: "100%",
+            height: "100%"  
+        },
+
+        headerImage: {
+            resizeMode: "cover",
+            opacity: 0.2,
+
+            /* very ugly */
+            position: 'absolute',
+            top: -(200) 
+            
         }
     },
 

@@ -19,6 +19,7 @@ let basicColors = {
     // SOLID
     basicWhite: "white",
     basicBlack: "black",
+    basicNavyBlue: "#070A20",
 
     // TRANSLUCENT
     basicWhiteTranslucent: 'rgba(255, 255, 255, .3)',
@@ -78,7 +79,7 @@ let lightDustyScheme: ColorScheme = {
         c2: lightDustyColors.lightSkyBlue,
         c3: basicColors.basicWhite,
         c4: lightDustyColors.lightGray,
-        c5: basicColors.basicBlack,
+        c5: basicColors.basicNavyBlue,
         tc1: basicColors.basicWhiteTranslucent
     },
 

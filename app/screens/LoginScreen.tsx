@@ -25,8 +25,8 @@ export default function LoginScreen(props: any) {
     return (
         <View style={style.loginContainer.container}>
             <ImageBackground
-                source={require('../../assets/images/headerImage.png')}
-                resizeMode='cover'>
+                source={require('../../assets/images/headerImage.jpg')}
+                imageStyle={style.loginContainer.headerImage}>
 
                 <View style={style.loginContainer.content}>
                     <StoryTitle
