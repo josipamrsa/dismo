@@ -6,10 +6,14 @@ var style = require('../../theme/styles')
 interface AppLinkProps {
     title?: string;
     url: string;
-    alignRight?: boolean
+    alignRight?: boolean;
 }
 
-export default function AppLink({ title, url, alignRight = false }: AppLinkProps) {
+export default function AppLink({ 
+    title, 
+    url, 
+    alignRight = false,
+}: AppLinkProps) {
     return (
         <View style={
             alignRight ? 

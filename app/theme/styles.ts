@@ -2,6 +2,11 @@ var React = require('react-native')
 var color = require('./colors')
 
 let styles = React.StyleSheet.create({
+    appContainer: {
+        flex: 1
+    },
+
+
     mainContainer: {
         container: {
             backgroundColor: color.currentTheme.mainBackgroundColor,
@@ -11,18 +16,19 @@ let styles = React.StyleSheet.create({
         },
     },
 
+
     loginContainer: {
         container: {
             marginTop: "2%",
-            width: "100%",  
+            width: "100%",
         },
 
         content: {
-            marginTop: "30%",
+            marginTop: "20%",
             paddingEnd: "8%",
             paddingStart: "8%",
             width: "100%",
-            height: "100%"  
+            height: "100%"
         },
 
         headerImage: {
@@ -31,10 +37,57 @@ let styles = React.StyleSheet.create({
 
             /* very ugly */
             position: 'absolute',
-            top: -(200) 
-            
+            top: -(200)
         }
     },
+
+
+    loginComponents: {
+        loginOptions: {
+            container: {
+                flexDirection: "row",
+                justifyContent: "center",
+                alignItems: "center",
+                marginTop: "15%"
+            },
+
+            title: {
+                color: color.currentTheme.primaryTextColor,
+                fontFamily: "raleway-extralight"
+            },
+
+            imageRow: {
+                flexDirection: "row"
+            }
+        },
+
+        loginOptionRegister: {
+            container: {
+                marginTop: "10%",
+                justifyContent: "center",
+                alignItems: "center",
+            },
+
+            divider: {
+                borderTopWidth: 1,
+                borderTopColor: color.currentTheme.primaryBorderColor,
+                padding: "4%",
+                width: "60%",
+            },
+
+            row: {
+                flexDirection: "row",
+                justifyContent: "center",
+                alignItems: "center",
+            },
+
+            title: {
+                color: color.currentTheme.primaryTextColor,
+                fontFamily: "raleway-extralight"
+            }
+        }
+    },
+
 
     onboardingComponents: {
         storyTitle: {
@@ -42,38 +95,43 @@ let styles = React.StyleSheet.create({
 
             primary: {
                 fontSize: 35,
-                fontFamily: 'raleway',
+                fontFamily: 'raleway-extralight',
                 fontWeight: 'light'
             },
 
             secondary: {
                 fontSize: 17,
-                fontFamily: 'raleway',
+                fontFamily: 'raleway-extralight',
                 fontWeight: 'light'
             }
         },
     },
 
+
     sharedComponents: {
         inputField: {
             hint: {
                 padding: 5,
-                fontSize: 10,
+                fontSize: 11,
                 fontFamily: 'raleway',
+                fontWeight: 600,
                 color: color.currentTheme.primaryTextColor,
+
             },
 
             value: {
                 padding: 5,
-                fontFamily: 'raleway', 
+                fontSize: 16,
+                fontFamily: 'raleway',
                 color: color.currentTheme.primaryTextColor,
+                width: "100%"
             },
 
             row: {
                 flexDirection: 'row',
                 alignItems: 'center',
                 justifyContent: 'space-between',
-                paddingEnd: 10
+                paddingEnd: 25
             },
 
             marginTop: 25,
@@ -93,14 +151,14 @@ let styles = React.StyleSheet.create({
 
             hyperLinkTitle: {
                 color: color.currentTheme.hyperLinkColor,
-                fontFamily: 'raleway',
+                fontFamily: 'raleway-semibold',
             }
         },
 
         customizableButton: {
             marginTop: "10%",
             marginBottom: "2%",
-            
+
             container: {
                 width: "100%",
                 justifyContent: "space-between",
@@ -117,7 +175,6 @@ let styles = React.StyleSheet.create({
             }
         }
     }
-
 })
 
 module.exports = styles

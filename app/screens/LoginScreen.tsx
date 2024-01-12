@@ -4,11 +4,11 @@ import { useState } from 'react';
 import AppLink from '../components/shared/AppLink';
 import StoryTitle from '../components/onboarding/StoryTitle';
 import CustomizableButton from '../components/shared/CustomizableButton';
+import LoginOptionsView from '../components/login/LoginOptionsView';
+import LoginOptionRegisterView from '../components/login/LoginOptionRegisterView';
 
 var style = require('../theme/styles')
 var color = require('../theme/colors')
-
-
 
 export default function LoginScreen(props: any) {
     const [email, setEmail] = useState("")
@@ -63,7 +63,13 @@ export default function LoginScreen(props: any) {
                         gradientColors={color.currentTheme.customizableButtonGradient}
                         gradiented />
 
+                    <LoginOptionsView />
+
+                    <LoginOptionRegisterView />
+
                 </View>
+
+
             </ImageBackground>
         </View>
 

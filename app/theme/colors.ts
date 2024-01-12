@@ -42,6 +42,7 @@ let lightDustyColors = {
     lightGray: "#9A9A9A",
     lightDustyPink: "#FFBEF6",
     lightSkyBlue: "#67BBF3",
+    lightDustyPurple: "#FB82FB",
 
     // TRANSLUCENT
     lightDustyPinkTranslucent: 'rgba(100, 48, 93, .75)',
@@ -76,7 +77,7 @@ let defaultScheme: ColorScheme = {
 let lightDustyScheme: ColorScheme = {
     colors: {
         c1: lightDustyColors.lightDustyPink,
-        c2: lightDustyColors.lightSkyBlue,
+        c2: lightDustyColors.lightDustyPurple,
         c3: basicColors.basicWhite,
         c4: lightDustyColors.lightGray,
         c5: basicColors.basicNavyBlue,
